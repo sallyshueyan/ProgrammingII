@@ -1,9 +1,18 @@
 def main():
-    password = input("Enter password: ")
-    count = len(password)
+    password = get_password()
+    password_length = len(password)
+    display_asterisks(password_length)
 
-    if count != 10:
-        for i in range(count):
+
+def display_asterisks(password_length):
+    if password_length != 10:
+        for i in range(password_length):
             print("*", end="")
+
+
+def get_password():
+    password = input("Enter password: ")
+    return password
+
 
 main()
