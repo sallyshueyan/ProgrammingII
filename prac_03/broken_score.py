@@ -1,7 +1,10 @@
+import random
+
+
 def main():
     score = get_score()
-    grade = check_score(score)
-    display_result(grade)
+    result = check_score(score)
+    display_result(result)
 
 
 def get_score():
@@ -11,18 +14,22 @@ def get_score():
 
 def check_score(score):
     if score < 0 or score > 100:
-        grade = "Invalid score"
+        result = "Invalid score"
     elif 50 < score <= 90:
-        grade = "Passable"
+        result = "Passable"
     elif score > 90:
-        grade = "Excellent"
+        result = "Excellent"
     else:
-        grade = "Bad"
-    return grade
+        result = "Bad"
+    return result
 
 
-def display_result(grade):
-    print(f"Your score is {grade}")
+def display_result(result):
+    print(f"Your score is {result}")
 
+
+random_number = random.randint(0, 100)
+result = check_score(random_number)
+print(f"Random score is {random_number} and is {result}")
 
 main()
