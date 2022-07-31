@@ -1,6 +1,9 @@
-password = input("Enter password: ")
-count = len(password)
+def main():
+    password = input("Enter password: ")
+    count = len(password)
 
-if count != 10:
-    for i in range(count):
-        print("*", end="")
+    if count != 10:
+        for i in range(count):
+            print("*", end="")
+
+main()
