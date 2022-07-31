@@ -14,12 +14,14 @@ def main():
 
 
 def get_choice():
+    """Get input, return input as choice"""
     print(MENU)
     choice = input(">>> ").upper()
     return choice
 
 
 def check_choice(choice):
+    """Check choice, get input for celsius or fahrenheit"""
     if choice == "C":
         celsius = float(input("Celsius: "))
         fahrenheit = celsius_to_fahrenheit(celsius)
@@ -33,10 +35,12 @@ def check_choice(choice):
 
 
 def celsius_to_fahrenheit(celsius):
+    """Return calculation of fahrenheit"""
     return celsius * 9.0 / 5 + 32
 
 
 def fahrenheit_to_celsius(fahrenheit):
+    """Return calculation of celsius"""
     return 5 / 9 * (fahrenheit - 32)
 
 
