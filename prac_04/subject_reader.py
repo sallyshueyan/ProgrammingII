@@ -12,6 +12,7 @@ def main():
 
 
 def display_data(data):
+    """Display subject details"""
     for information in data:
         print("{:5} is taught by {:12} and has {:3} students.".format(*information))
 
