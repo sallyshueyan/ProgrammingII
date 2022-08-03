@@ -17,6 +17,7 @@ def main():
 
 
 def display_report(incomes, number_of_months):
+    """Display report based on the incomes as inputs."""
     print("\nIncome Report\n-------------")
     total = 0
     for month in range(1, number_of_months + 1):
