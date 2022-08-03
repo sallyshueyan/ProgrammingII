@@ -1,4 +1,5 @@
-def main():
+# 1. Basic list operations
+'''def main():
     numbers = [] # collect numbers as input in the list
     for i in range(5):
         input_numbers = int(input("Numbers: "))
@@ -15,4 +16,11 @@ def display_result(numbers):
     print(f"The largest number is {max(numbers)}")
     print(f"The average of the numbers is {sum(numbers) / len(numbers)}")
 
-main()
+main()'''
+
+# 2. Woefully inadequate security checker
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
+             'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+
+
+
