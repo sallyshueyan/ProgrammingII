@@ -10,4 +10,4 @@
 # "3" in numbers False
 # numbers + [6, 5, 3] = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
 
-numbers = ["ten", 1, 4, 1, 5, 9, 2]
+numbers = ["ten", 1, 4, 1, 5, 9, 1]
