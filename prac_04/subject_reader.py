@@ -8,7 +8,12 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = get_data()
-    #print(data)
+    display_data(data)
+
+
+def display_data(data):
+    for information in data:
+        print("{:5} is taught by {:12} and has {:3} students.".format(*information))
 
 
 def get_data():
@@ -23,7 +28,7 @@ def get_data():
         print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
-        #print("----------")
+        print("----------")
         data.append(parts)
     input_file.close()
     return data
