@@ -20,10 +20,10 @@ def display_report(incomes, number_of_months):
     """Display report based on the incomes as inputs."""
     print("\nIncome Report\n-------------")
     total = 0
-    for month in range(1, number_of_months + 1):
-        income = incomes[month - 1]
+    for index, i in enumerate(incomes, start= 1):
+        income = incomes[index - 1]
         total += income
-        print("Month {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(month, income, total))
+        print("Month {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(index, income, total))
 
 
 main()
