@@ -17,9 +17,19 @@ def main():
 
 def display_subjects(subjects):
     """Display subject code, lecturer and number of students."""
+    check_alignment(subjects)
     for subject in subjects:
         print(
-            f"{subject[0]} is taught by {subject[1]:12} and has {subject[2]:4} students")
+            f"{subject[0]} is taught by {subject[1]:{max(check_alignment(subjects))}} and has {subject[2]:4} students")
+
+
+def check_alignment(subjects):
+    """Calculate the length of all subjects' lecturer name."""
+    length = []
+    for subject in subjects:
+        check_length = len(subject[1])
+        length.append(check_length)
+    return length
 
 
 def load_subjects():
