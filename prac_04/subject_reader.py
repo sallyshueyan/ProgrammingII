@@ -7,33 +7,40 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = get_data()
-    display_data(data)
-    print(data)
+    subjects = load_subjects()
+    print(subjects)
+    display_subjects(subjects)
+
+    total_number_of_students = get_total_number_of_students(subjects)
+    print(f"Total number of students taking {len(subjects)} subjects = {total_number_of_students}")
 
 
-def display_data(data):
-    """Display subject details"""
-    for information in data:
-        print("{:5} is taught by {:12} and has {:3} students.".format(*information))
+def display_subjects(subjects):
+    """Display subject code, lecturer and number of students."""
+    for subject in subjects:
+        print(
+            f"{subject[0]} is taught by {subject[1]:12} and has {subject[2]:4} students")
 
 
-def get_data():
+def load_subjects():
     """Read data from file formatted like: subject,lecturer,number of students."""
-    subject = []  # a list of lists ( a list of subject list)
+    subjects = []  # a list of lists ( a list of subject list)
     input_file = open(FILENAME)
     for line in input_file:
-        print(line)  # See what a line looks like
-        # print(repr(line))  # See what a line really looks like
         line = line.strip()  # Remove the \n
         parts = line.split(',')  # Separate the data into its parts
-        # print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        # print(parts)  # See if that worked
-        # print("----------")
-        subject.append(parts)  # put in the subject into a list of subjects
+        subjects.append(parts)  # put in the subject into a list of subjects
     input_file.close()
-    return subject
+    return subjects
+
+
+def get_total_number_of_students(subjects):
+    """Calculate the total number of students in all subjects"""
+    total_students = 0
+    for subject in subjects:
+        total_students += subject[2]
+    return total_students
 
 
 main()
