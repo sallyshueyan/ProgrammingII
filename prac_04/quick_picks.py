@@ -12,15 +12,19 @@ def main():
         print("Put a valid number.")
         numbers_of_quick_picks = int(input("How many quick picks? "))
 
+    retrieve_random_numbers(numbers_of_quick_picks)
+
+
+def retrieve_random_numbers(numbers_of_quick_picks):
     for i in range(numbers_of_quick_picks):
         quick_pick = []
-        for j in range(NUMBERS_IN_LINE): # numbers for each line is 6
+        for j in range(NUMBERS_IN_LINE):  # numbers for each line is 6
             number = random.randint(MINIMUN_NUMBER, MAXIMUM_NUMBERS)
             while number in quick_pick:
                 number = random.randint(MINIMUN_NUMBER, MAXIMUM_NUMBERS)
             quick_pick.append(number)
         quick_pick.sort()
-        print(" ".join("{:3}".format(number) for number in quick_pick))
+        print(" ".join("{:2}".format(number) for number in quick_pick))
 
 
 main()
