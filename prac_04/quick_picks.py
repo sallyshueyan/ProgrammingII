@@ -16,6 +16,7 @@ def main():
 
 
 def retrieve_random_numbers(numbers_of_quick_picks):
+    """Function generate random number and display"""
     for i in range(numbers_of_quick_picks):
         quick_pick = []
         for j in range(NUMBERS_IN_LINE):  # numbers for each line is 6
