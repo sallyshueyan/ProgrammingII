@@ -2,5 +2,7 @@ COLOUR_NAME_TO_CODE = {"CandyAppleRed": '#ff0800', "DarkOrange": '#ff8c00', "Gol
                        "Inchworm": "#b2ec5d", "LightSkyBlue": "#87cefa",
                        "PersianIndigo": "#32127a", "Purple": '#a020f0'}
 
+colour_name = input("Enter a colour name: ").title()
+
 
 
