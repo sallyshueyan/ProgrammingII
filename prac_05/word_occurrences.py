@@ -9,6 +9,16 @@ def main():
     words = list(word_to_count.keys())
     words.sort()
 
+    def check_alignment():
+        length_of_word = 0
+        for word in word_to_count:
+            if length_of_word < len(word):
+                length_of_word = len(word)
+        return length_of_word
+
+    for word in words:
+        print(f"{word:{check_alignment()}} : {word_to_count[word]}")
+
 
 
 main()
