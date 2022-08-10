@@ -5,6 +5,12 @@ def main():
                            "Iceberg": "#71a6d2"}
 
     colour_name = input("Enter a colour name: ").title()
+    while colour_name != "":
+        if colour_name in COLOUR_NAME_TO_CODE:
+            print(colour_name, "is", COLOUR_NAME_TO_CODE[colour_name])
+        else:
+            print("Invalid colour name")
+        colour_name = input("Enter a colour name: ").title()
 
 
 main()
