@@ -1,4 +1,5 @@
 def main():
+    """Start of program."""
     email_to_name = {}
     user_email = input("Email: ")
 
