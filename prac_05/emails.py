@@ -4,6 +4,13 @@ def main():
 
     while user_email != "":
         user_name = get_name_from_email(user_email)
+        name_confirmation = input(f"Is your name {user_name}? (Y/n) ").upper()
+        if name_confirmation.upper() != "Y" and name_confirmation != "":
+            user_name = input("Name: ")
+        email_to_name[user_email] = user_name
+        user_email = input("Email: ")
+
+
 
 
 def get_name_from_email(user_email):
