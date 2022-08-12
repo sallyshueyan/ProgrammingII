@@ -1,3 +1,6 @@
 def main():
     email_to_name = {}
-    email = input("Email: ")
+    user_email = input("Email: ")
+
+
+main()
