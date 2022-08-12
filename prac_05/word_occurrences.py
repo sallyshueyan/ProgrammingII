@@ -20,5 +20,4 @@ def main():
         print(f"{word:{check_alignment()}} : {word_to_count[word]}")
 
 
-
 main()
