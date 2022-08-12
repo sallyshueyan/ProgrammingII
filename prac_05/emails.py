@@ -10,7 +10,8 @@ def main():
         email_to_name[user_email] = user_name
         user_email = input("Email: ")
 
-
+    for user_email, user_name in email_to_name.items():
+        print(f"{user_name} ({user_email})")
 
 
 def get_name_from_email(user_email):
