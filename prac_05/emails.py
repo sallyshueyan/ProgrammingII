@@ -15,6 +15,7 @@ def main():
 
 
 def get_name_from_email(user_email):
+    """Organise user name using input."""
     prefix = user_email.split('@')[0]
     parts = prefix.split('.')
     name = " ".join(parts).title()
