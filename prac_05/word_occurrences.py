@@ -10,7 +10,7 @@ def main():
     words.sort()
 
     def check_alignment():
-        """Check alignment."""
+        """Program check alignment."""
         length_of_word = 0
         for word in word_to_count:
             if length_of_word < len(word):
