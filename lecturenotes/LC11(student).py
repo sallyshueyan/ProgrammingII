@@ -18,5 +18,5 @@ if __name__ == "__main__":
     print(f"First name: {student1.first_name}, Last name: {student1.last_name}, Student ID: {student1.id}")
 
     print(student1)
-    # OR
+    # OR (they are the same)
     print(student1.__str__())
