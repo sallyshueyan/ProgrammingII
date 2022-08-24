@@ -15,8 +15,10 @@ class Student:  # class name must start with a Capital letter
 
 if __name__ == "__main__":
     student1 = Student("Michael", "Jordan", 23)
+    student2 = Student("Magic", "Johnson", 32)
     print(f"First name: {student1.first_name}, Last name: {student1.last_name}, Student ID: {student1.id}")
 
-    print(student1)
+    print(student1.first_name)
+    print(student2.first_name)
     # OR (they are the same)
     print(student1.__str__())
