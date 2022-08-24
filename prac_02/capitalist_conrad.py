@@ -47,7 +47,7 @@ a 50% chance that it decreases by 0 to 5%.
 If the price rises above $1000, or falls below $0.01, the program should end.
 The price should be displayed to the nearest cent (e.g. $33.59, not $33.5918232901)
 """
-import random
+import alignment_check
 
 MAX_INCREASE = 0.175  # 17.5%
 MAX_DECREASE = 0.05  # 5%
@@ -86,15 +86,15 @@ a 50% chance that it decreases by 0 to 5%.
 If the price rises above $1000, or falls below $0.01, the program should end.
 The price should be displayed to the nearest cent (e.g. $33.59, not $33.5918232901)
 """
-import random
+import alignment_check
 
 OUTPUT_FILE = "capitalist_conrad.txt"
 out_file = open(OUTPUT_FILE, "w")
 
 MAX_INCREASE = 0.175  # 17.5%
 MAX_DECREASE = 0.05  # 5%
-MIN_PRICE = 1.0 # price range is start with $1
-MAX_PRICE = 100.0 # price range end with $100
+MIN_PRICE = 1.0  # price range is start with $1
+MAX_PRICE = 100.0  # price range end with $100
 INITIAL_PRICE = 10.0
 
 price = INITIAL_PRICE
