@@ -10,9 +10,5 @@ def main():
     print(name_to_date_of_birth)
 
 
-if __name__ == '__main__':
-<<<<<<< HEAD
-    main()
-=======
-    main()
->>>>>>> origin/master
+main()
+
