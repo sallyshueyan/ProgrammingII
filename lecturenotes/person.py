@@ -13,6 +13,5 @@ class Person:
 p1 = Person("Jane", 19)
 print(f"p1: {p1}")
 people = [Person("Alexa", 21), Person("Siri", 25)]
-print(f"people: {people}") # without line 9-10 is wrong
+print(f"people: {people}")  # without line 9-10 is wrong
 print([str(person) for person in people])
-
