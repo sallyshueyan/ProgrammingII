@@ -9,6 +9,9 @@ class ProgrammingLanguage:
     def __str__(self):
         return f"{self.name}, {self.dynamic} Typing, Reflection={self.reflection}, First appeared in {self.year}"
 
+    def is_dynamic(self):
+        return self.dynamic == "Dynamic"
+
 
 if __name__ == "__main__":
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
@@ -19,4 +22,7 @@ if __name__ == "__main__":
     languages = [ruby, python, visual_basic]
     print(languages)
 
-
+    print("The dynamically typed languages are:")
+    for language in languages:
+        if language.is_dynamic():
+            print(language.name)
