@@ -1,9 +1,10 @@
 from prac_06.guitar import Guitar
+from operator import itemgetter
+
+guitars = []
 
 
 def main():
-    guitars = []
-
     print("My guitars!")
     name = input("Name: ")
     while name != "":
