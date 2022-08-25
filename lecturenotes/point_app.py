@@ -4,7 +4,7 @@ from point import Point
 def main():
     points = []
     for i in range(3):
-        print(f"Point {i+1}")
+        print(f"Point {i + 1}")
         print("*" * 15)
         x_coordinate = float(input("X? "))
         y_coordinate = float(input("Y? "))
@@ -12,7 +12,6 @@ def main():
         points.append(new_point)
 
     print(points)
-
 
 
 if __name__ == '__main__':
