@@ -19,6 +19,7 @@ def main():
     limo.add_fuel(20)
     print(limo.fuel)
     limo.drive(115)
+    print(limo.odometer)
 
 
 main()
