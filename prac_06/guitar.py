@@ -1,6 +1,7 @@
 YEAR = 2020
 VINTAGE_AGE = 50
 
+
 class Guitar:
     def __init__(self, name="", year=0, cost=0):
         self.name = name
@@ -18,5 +19,3 @@ class Guitar:
             return True
         else:
             return False
-
-
