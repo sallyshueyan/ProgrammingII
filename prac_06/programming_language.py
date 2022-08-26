@@ -1,15 +1,18 @@
 class ProgrammingLanguage:
 
     def __init__(self, name="", dynamic="", reflection="", year=0):
+        """Function define attributes."""
         self.name = name
         self.dynamic = dynamic
         self.reflection = reflection
         self.year = year
 
     def __str__(self):
+        """Return programming language and details."""
         return f"{self.name}, {self.dynamic} Typing, Reflection={self.reflection}, First appeared in {self.year}"
 
     def is_dynamic(self):
+        """Check programming language's dynamic status."""
         return self.dynamic == "Dynamic"
 
 
