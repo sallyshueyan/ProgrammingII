@@ -19,7 +19,7 @@ class ProgrammingLanguage:
         return "{}".format(self.name)
 
 
-def main():
+if __name__ == "__main__":
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
     python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
@@ -34,5 +34,3 @@ def main():
         if language.is_dynamic():
             print(language.name)
 
-
-main()
