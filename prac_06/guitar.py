@@ -1,4 +1,4 @@
-YEAR = 2020
+from datetime import datetime
 VINTAGE_AGE = 50
 
 
@@ -15,7 +15,8 @@ class Guitar:
 
     def get_age(self):
         """Calculate age of guitar."""
-        return YEAR - self.year
+        today = datetime.today()
+        return today.year - self.year
 
     def is_vintage(self):
         """Check vintage status."""
@@ -23,4 +24,7 @@ class Guitar:
             return True
         else:
             return False
+
+        # OR
+        # return self.get_age() >= VINTAGE_AGE
 
