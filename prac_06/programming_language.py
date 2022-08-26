@@ -15,17 +15,24 @@ class ProgrammingLanguage:
         """Check programming language's dynamic status."""
         return self.dynamic == "Dynamic"
 
+    def __repr__(self):
+        return "{}".format(self.name)
 
-if __name__ == "__main__":
+
+def main():
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
     python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
     print(ruby.__str__())
 
     languages = [ruby, python, visual_basic]
-    print(languages)
+    print(f"Languages list contain: {[str(language) for language in languages]}")
+    print(f"Languages list contain these few languages: {[str(languages)]}")
 
     print("The dynamically typed languages are:")
     for language in languages:
         if language.is_dynamic():
             print(language.name)
+
+
+main()
