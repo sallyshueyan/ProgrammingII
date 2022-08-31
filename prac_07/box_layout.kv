@@ -3,10 +3,12 @@ BoxLayout:
   # orientation: 'horizontal'
 # Change the first button so it says "Clear" and the third button so it says "Greet".
 # Add a button handler.
+# Change button "two" to a text input field.
     Button:
         text: 'Clear'
-    Button:
-        text: 'two'
+    TextInput:
+        id: input_name
+        text: ''
     Button:
         text: 'Greet'
         on_press: app.handle_greet()
