@@ -2,7 +2,7 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
-__author__ = 'Lindsay Ward'
+__author__ = 'Sally Pang'
 
 
 class SquareNumberApp(App):
@@ -20,7 +20,7 @@ class SquareNumberApp(App):
             result = float(value) ** 2
             self.root.ids.output_label.text = str(result)
         except ValueError:
-            pass
+            self.root.ids.output_label.text = ""
 
 
 SquareNumberApp().run()
