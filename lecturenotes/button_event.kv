@@ -1,0 +1,22 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "Your input? "
+
+
+        TextInput:
+            id: user_input
+            multiline: False
+            on_text_validate: app.press_button()
+
+        Button:
+            id:"Press me"
+            on_press: app.press_button()
+
+        Label:
+            id: your_label
+            text: app.message
+            font_size: 42
+
