@@ -17,6 +17,7 @@ class DynamicWidgetsApp(App):
         self.status_text = f"{len(self.name_to_phone)} Contacts Loaded!"
 
     def load_contacts(self):
+        """Load and read csv file."""
         with open("contacts.csv", "r") as in_file:
             for line in in_file.readlines():
                 data = line.split(",")
