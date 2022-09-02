@@ -1,0 +1,37 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout: # Top row
+        orientation: 'horizontal'
+        id: top_row_box
+
+        BoxLayout: # Column 1
+            orientation: 'vertical'
+            # this layout is populated with Button widgets in app code
+            id: entries_box
+            size_hint_x: 0.7
+
+        BoxLayout: # Column 2
+            orientation: 'vertical'
+            # this layout is populated with Button widgets in app code
+            size_hint_x: 0.3
+            Label:
+                text: "Name"
+            TextInput:
+                id: name_input
+            Label:
+                text: "Contact"
+            TextInput:
+                id: contact_input
+    Label:
+        size_hint_y: 0.1
+        text: app.status_text
+        color: (0.996, 0.435, 0.369, 1) # Red Green Blue Alpha (Opacity) #fe 6f 5e  = 245 111 94 -> 245/255 111/245 94/255
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.2
+        Button:
+            text: "Create Widgets"
+            on_release: app.create_widgets()
+        Button:
+            text: "Clear Widgets"
+            on_release: app.clear_all()
