@@ -11,3 +11,5 @@ class SilverServiceTaxi(Taxi):
     def calculate_fare(self):
         return super().get_fare() + self.flagfall
 
+    def __str__(self):
+        return f"{super().__str__()} plus flagfall of {self.flagfall}"
