@@ -10,5 +10,6 @@ def main():
 # Restart the meter (start a new fare) and then drive the car 100 km
     taxi.start_fare()
     taxi.drive(100)
-
+# Print the details and the current fare
+    print(taxi)
 main()
