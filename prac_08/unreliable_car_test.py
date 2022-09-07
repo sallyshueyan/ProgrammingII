@@ -9,8 +9,8 @@ def main():
         print(f"{reliable_car.name:5} drove {reliable_car.drive(i):2}km")
         print(f"{unreliable_car.name:5} drove {unreliable_car.drive(i):2}km")
 
-
-
+    print(reliable_car)
+    print(unreliable_car)
 
 
 main()
