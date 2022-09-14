@@ -13,6 +13,19 @@ def main():
     for directory_name, subdirectory, filename in os.walk('.'):
         type_list = create_type_list(filename)
 
+        for ext_type in type_list:
+            try:
+                os.mkdir(ext_type)
+            except FileExistsError:
+                pass
+        try:
+            for file in filename:
+                file_ext = get_extension(file)
+                shutil.move(file, file_ext)
+        except shutil.Error:
+            pass
+    print("Sort complete")
+
 
 
 def create_type_list(filenames):
