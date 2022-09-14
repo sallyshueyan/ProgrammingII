@@ -38,6 +38,12 @@ def create_type_list(filenames):
     return type_list
 
 
+def get_extension(file):
+    """Get the extension of target file."""
+    file_type = file.split('.')[-1]
+    return file_type
+
+
 
 
 
