@@ -29,5 +29,22 @@ def get_fixed_filename(filename):
     old_title = filename.replace(" ", "_").replace(".TXT", ".txt")
     print(old_title)
 
+    for index, char in enumerate(old_title):
+        if char.isspace():
+            char = "_"
+        elif char.isalpha:
+            try:
+                previous_char = old_title[index - 1]
+                next_char = old_title[index + 1]
+                if next_char.isupper() or next_char == "(":
+                    char += "_"
+                elif previous_char == "(":
+                    char = char.upper()
+            except IndexError:
+                pass
+        new_title += char
+    new_title += ".txt"
+    return new_title
+
 
 main()
