@@ -1,4 +1,3 @@
-
 import os
 
 
@@ -19,14 +18,13 @@ def main():
         except FileExistsError:
             pass
 
-
         os.rename(filename, "{}/{}".format(ext_type_to_cat[ext], filename))
+
 
 def get_extension(filename):
     """Get the extension of target file."""
     ext = filename.split('.')[-1]
     return ext
-
 
 
 main()

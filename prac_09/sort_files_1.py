@@ -1,7 +1,5 @@
-
 import os
 import shutil
-
 
 FILE_DESTINATION = "FilesToSort"
 
@@ -27,7 +25,6 @@ def main():
     print("Sort complete")
 
 
-
 def create_type_list(filenames):
     """Create a list of the different types of extensions in the target file."""
     type_list = []
@@ -42,9 +39,6 @@ def get_extension(file):
     """Get the extension of target file."""
     file_type = file.split('.')[-1]
     return file_type
-
-
-
 
 
 main()

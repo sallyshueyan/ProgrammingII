@@ -62,5 +62,6 @@ def demo_walk():
             os.rename(path_name, new_name)
             print(f"{path_name} is changed to {new_name}")
 
+
 main()
 # demo_walk()
