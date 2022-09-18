@@ -48,6 +48,3 @@ def get_fixed_filename(filename):
 
 
 main()
-
-
-
