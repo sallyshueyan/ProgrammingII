@@ -19,7 +19,7 @@ def is_long_word(word, length=5):
     False
     >>> is_long_word("supercalifrag")
     True
-    >>> is_long_word("Python", 6)
+    >>> is_long_word("Python")
     True
     """
     return len(word) > length
