@@ -35,7 +35,6 @@ def run_tests():
     # TODO: 1. fix the repeat_string function above so that it passes the failing test
     # Hint: "-".join(["yo", "yo"] -> "yo-yo"
 
-
     # assert test with custom message,
     # used to see if Car's init method sets the odometer correctly
     # this should pass (no output)
@@ -51,8 +50,6 @@ def run_tests():
 
     test_car = Car()
     assert test_car.fuel == 0
-
-
 
 
 # TODO: 3. Uncomment the following line and run the doctests
@@ -88,6 +85,7 @@ def phrase_to_sentence(phrase):
     if sentence[-1] != '.':
         sentence += '.'
     return sentence
+
 
 run_tests()
 doctest.testmod()
