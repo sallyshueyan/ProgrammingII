@@ -10,4 +10,7 @@ while user_input != '':
     except wikipedia.PageError:
         print(f"{user_input} result not found. Please try again")
         user_input = input("Enter a word or phrase to search: ")
+    except wikipedia.DisambiguationError as ed:
+        print(ed.options)
+        user_input = input("Enter a word or phrase to search: ")
 print("Thank you and see you next time")
